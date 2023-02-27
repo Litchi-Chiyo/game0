@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        body {
+            font-family: "あんずもじ2020";
+            color: #000000;
+            font-size: 60px;
+        }
+        #btn-play{ width:280px; height:80px; padding:0px; font-size:60px; }
+        #btn-left{ width:130px; height:130px; padding:0px; font-size:120px; }
+        #btn-right{ width:130px; height:130px; padding:0px; font-size:120px; }
+        #number0 {width: 120px;}
+        #number1 {width: 120px;}
+        #number2 {width: 120px;}
+        
+    </style>
+</head>
+<title>バレーくんVSひで</title>
+
+<body>
+    <canvas id="myCanvas" width="960" height="640" style="position: absolute; left: 0px; top: 0px"></canvas>
+
+    <!-- 再生ボタン -->
+    <button id="btn-play" type="button" style="position: absolute; left: 660px; top: 660px"></button>
+
+    <!-- 動画ファイル -->
+    <video id="video0" src="ガチ切れおじさん.mp4" height="480" style="position: absolute; left: 0px; top: 660px"></video>
+
+    <!-- 音声ファイル -->
+    <audio id="bgm0" preload loop>
+        <source src="フレーミー神社.nhk.mp3" type = "audio/mp3">
+    </audio>
+
+
+    <input id="number0" type="number" min="1" max="8" value="6" placeholder="行数" style="position: absolute; left: 660px; top: 900px"/>
+    <input id="number1" type="number" min="1" max="8" value="6" placeholder="列数" style="position: absolute; left: 660px; top: 920px"/>
+    <input id="number2" type="number" min="1" max="16" value="10" placeholder="初速度" style="position: absolute; left: 660px; top: 960px"/>
+
+
+    <!-- 操作ボタン -->
+    <button id="btn-left" type="button" style="position: absolute; left: 660px; top: 760px">
+        <font face="あんずもじ2020">←</font>
+    </button>
+    <button id="btn-right" type="button" style="position: absolute; left: 810px; top: 760px">
+        <font face="あんずもじ2020">→</font>
+    </button>
+    
+    <!--javascript-->
+    <script src="init.js"></script>
+    <script src="main.js"></script>
+    
+    <p style="position: absolute; left: 660px; top: 910px">LIC_CY</p>
+
+    <div id="container"></div>
+
+</body>
+
+</html>
